@@ -8,7 +8,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   TextEditingController numController = new TextEditingController();
   //double inputVal = numController ;
-  var titheVal;
+  var titheVal = '0.00';
   @override
   Widget build(BuildContext context) {
     numController.addListener(() {
@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                           ),
                           Spacer(),
                           Text(
-                            'GHS ${numController.text}',
+                            'GHS $titheVal',
                             style: TextStyle(color: Colors.white, fontSize: 30),
                           ),
                         ],

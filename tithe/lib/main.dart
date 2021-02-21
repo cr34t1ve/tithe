@@ -4,7 +4,7 @@ import 'package:tithe/splash.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: '/splash',
+    initialRoute: '/',
     routes: {
       '/': (context) => Splash(),
       '/home': (context) => Home()
