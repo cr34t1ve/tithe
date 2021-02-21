@@ -6,9 +6,9 @@ class Splash extends StatelessWidget {
   Widget build(BuildContext context) {
 
     //Splash duration
-    // new Future.delayed(const Duration(seconds: 3), () {
-    //   Navigator.pushNamed(context, '/home');
-    // });
+    new Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushNamed(context, '/home');
+    });
 
     return Scaffold(
       backgroundColor: Colors.black,
