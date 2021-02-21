@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
+
+    //Splash duration
+    // new Future.delayed(const Duration(seconds: 3), () {
+    //   Navigator.pushNamed(context, '/home');
+    // });
+
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
