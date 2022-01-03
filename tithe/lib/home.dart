@@ -12,7 +12,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     numController.addListener(() {
-      titheVal = numController.text;
+      setState(() {
+        titheVal = numController.text;
+      });
     });
     return Scaffold(
       body: SafeArea(
@@ -48,7 +50,9 @@ class _HomeState extends State<Home> {
                           ),
                           Spacer(),
                           Text(
-                            'GHS $titheVal',
+                            numController.text.isEmpty
+                                ? '0.00'
+                                : numController.text,
                             style: TextStyle(color: Colors.white, fontSize: 30),
                           ),
                         ],
@@ -74,9 +78,9 @@ class _HomeState extends State<Home> {
                 height: 120,
                 child: TextField(
                   controller: numController,
-                  onChanged: (text) {
-                    titheVal = text;
-                  },
+                  // onChanged: (text) {
+                  //   titheVal = text;
+                  // },
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.end,
                   style: TextStyle(fontSize: 38),
